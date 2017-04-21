@@ -116,6 +116,15 @@ border-bottom-left-radius: 3px;//左下角圆边
 
 //=================注册====================
 .admin{
+  background-image:image_url('bi.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  background-color: rgba(250, 250, 250, 0.5)
+}
+//================登录===================
+
+.admin-session{
   background-image:image_url('san.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +137,7 @@ border-bottom-left-radius: 3px;//左下角圆边
 //==============jobs===================
 
 .set-jobs{
-  background-image:image_url('g.jpg');
+  background-image:image_url('fei.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
@@ -1234,6 +1243,11 @@ single-work span i.fa,
 
 //===== user ====
 .user_setup{
+   height: 750px;
+   background: image_url("g.jpg") no-repeat scroll top center/ cover;
+}
+
+.user_setin{
    height: 750px;
    background: image_url("bi.png") no-repeat scroll top center/ cover;
 }
