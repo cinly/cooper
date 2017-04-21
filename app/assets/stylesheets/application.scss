@@ -1239,7 +1239,11 @@ single-work span i.fa,
        color: transparent;
    }
 }
-
+//========show========
+.show{
+   height: 750px;
+   background: image_url("new.jpg") no-repeat scroll top center/ cover;
+}
 
 //===== user ====
 .user_setup{
