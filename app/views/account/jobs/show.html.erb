@@ -12,9 +12,7 @@
         <%= simple_format(@job.description, class: "job-description") %>
       </p>
       <div class="divider"></div>
-      <p>
-        <span>Loaction:</span> <%= @job.city %>
-      </p>
+
       <p>
         <span>Publish Time</span>: <%= time_ago_in_words(@job.created_at) %> ago
       </p>
@@ -23,9 +21,9 @@
       </p>
       <div class="text-center">
         <% if current_user && current_user.has_applied?(@job) %>
-          <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-primary disabled") %>
+          <%= link_to("Applied", new_job_resume_path(@job), class: "btn btn-primary disabled") %>
         <% else %>
-          <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
+          <%= link_to("Apply", new_job_resume_path(@job), class: "btn btn-primary") %>
         <% end %>
       </div>
     </div>
