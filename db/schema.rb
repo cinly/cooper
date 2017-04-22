@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419125500) do
+ActiveRecord::Schema.define(version: 20170421172439) do
 
   create_table "job_relationships", force: :cascade do |t|
     t.integer  "job_id"
