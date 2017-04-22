@@ -1,20 +1,20 @@
 <div class="container">
     <div class="row all_image">
         <div class="col-xs-6 col-md-3 all_image_css">
-            <%= link_to image_tag("all_steel.jpg", class: "img-rounded img-responsive img-center"), image_path(steel_jobs_path(:order => "category")) %>
-            <h4 class="text-center"><%= link_to("铁匠", steel_jobs_path(:order => "category")) %></h4>
+            <%= link_to image_tag("a.jpg", class: "img-rounded img-responsive img-center"), image_path(grow_jobs_path(:order => "category")) %>
+            <h4 class="text-center"><%= link_to("1111", grow_jobs_path(:order => "category")) %></h4>
         </div>
         <div class="col-xs-6 col-md-3 all_image_css">
-            <%= link_to image_tag("all_wood.jpg", class: "img-rounded img-responsive img-center"), image_path(wood_jobs_path(:order => "category")) %>
-            <h4 class="text-center"><%= link_to("木匠", wood_jobs_path(:order => "category")) %></h4>
+            <%= link_to image_tag("b.jpg", class: "img-rounded img-responsive img-center"), image_path(study_jobs_path(:order => "category")) %>
+            <h4 class="text-center"><%= link_to("222", study_jobs_path(:order => "category")) %></h4>
         </div>
         <div class="col-xs-6 col-md-3 all_image_css">
-            <%= link_to image_tag("all_stone.jpg", class: "img-rounded img-responsive img-center"), image_path(stone_jobs_path(:order => "category")) %>
-            <h4 class="text-center"><%= link_to("石匠", stone_jobs_path(:order => "category")) %></h4>
+            <%= link_to image_tag("c.jpg", class: "img-rounded img-responsive img-center"), image_path(cognitive_jobs_path(:order => "category")) %>
+            <h4 class="text-center"><%= link_to("33333", cognitive_jobs_path(:order => "category")) %></h4>
         </div>
         <div class="col-xs-6 col-md-3 all_image_css">
-            <%= link_to image_tag("all_jobs.jpg", class: "img-rounded img-responsive img-center"), image_path(jobs_path) %>
-            <h4 class="text-center"><%= link_to("全部", jobs_path) %></h4>
+            <%= link_to image_tag("d.jpg", class: "img-rounded img-responsive img-center"), image_path(jobs_path) %>
+            <h4 class="text-center"><%= link_to("all", jobs_path) %></h4>
         </div>
     </div>
 
@@ -46,14 +46,14 @@
             <table class="table table-boldered table-striped">
                 <thead>
                     <tr>
-                        <td>匠职</td>
+                        <td>群体</td>
                         <td>工种</td>
                         <td>薪俸范围</td>
                         <td>公司</td>
                         <td>城市</td>
                         <td>创建时间</td>
                         <td>竟征人数</td>
-                        <td>操作</td>
+                        <td>管理</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,9 +80,7 @@
         </div>
 
         <div class="text-center">
-            <%= will_paginate @jobs, renderer: BootstrapPagination::Rails, class: "pagination pagination-sm"%>
+            <%= will_paginate @jobs %>
         </div>
 
     </div>
-
-    <script src="app/assets/javascripts/jquery.js"></script>
