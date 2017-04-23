@@ -13,55 +13,75 @@
 
 
 
+<!--============bottom=======--->
+
+
     <div class="container">
+      <div class="row">
+        <div class="row">
+          <div class="row">
+             <div class="col-md-10 col-md-offset-1 text-center">
+                  <h2 class="h2">我们的原则</h2>
 
       <hr />
 
       <div class="row">
         <div class="col-md-4">
           <i class="fa fa-4x fa fa-circle-o"></i>
-
           <h3 class="h3">一个共同成长的圈子</h3>
-
           <p>xxxxxxxxxxxxx</p>
         </div>
 
         <div class="col-md-4">
           <i class="fa fa-4x fa-rocket"></i>
-
           <h3 class="h3">一个平等欢乐的平台</h3>
-
           <p>xxxxxxxxxxxxxxx</p>
         </div>
 
         <div class="col-md-4">
           <i class="fa fa-4x fa-map"></i>
-
           <h3 class="h3">一个三观相投的载体</h3>
-
           <p>xxxxxxxxxxxxxxxxx</p>
+        </div>
+
         </div>
       </div>
     </div>
-    <hr>
+  </div>
+ </div>
+</div>
 
 
-  <!--======== 热门伙伴 =========-->
-  <div class="row">
-        <div class="col-sm-4">
-            <%= link_to image_tag("san.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
-            <h4 class="text-center">寻找你的伙伴</h4>
-            <p>111111111</p>
-        </div>
-        <div class="col-sm-4">
-            <%= link_to image_tag("c.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
-            <h4 class="text-center">寻找你的伙伴</h4>
-            <p>22222。</p>
+<br>
+<br>
+<!--======== 热门伙伴 =========-->
+<section id="brand" class="our-brand row">
+        <div class="container">
+          <div class="row">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                <h2 class="section-title">合作伙伴</h2>
+              <div class="short-line"></div>
 
-        </div>
-        <div class="col-sm-4">
-            <%= link_to image_tag("shu.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
-            <h4 class="text-center">寻找你的伙伴</h4>
-            <p>3333333</p>
-        </div>
-    </div>
+              <div class="col-sm-4">
+                <i><%= link_to image_tag("cz2.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%></i>
+                <h4 class="text-center">寻找你的伙伴</h4>
+               <p>111111111</p>
+             </div>
+             <div class="col-sm-4">
+                <%= link_to image_tag("xx.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
+                <h4 class="text-center">寻找你的伙伴</h4>
+               <p>22222。</p>
+            </div>
+
+            <div class="col-sm-4">
+               <%= link_to image_tag("rz.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
+               <h4 class="text-center">寻找你的伙伴</h4>
+              <p>3333333</p>
+           </div>
+
+       </div>
+     </div>
+   </div>
+  </div>
+</section>
