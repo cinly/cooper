@@ -1,29 +1,20 @@
 
 <div class="row set-jobs" >
-<div class="col-md-10 col-md-offset-1 job-content">
-  <div class="main-box">
+ <div class="col-md-10 col-md-offset-1 job-content">
 
-  <div class="col-md-9 col-xs-9 job-box row">
+
+
+  <div class="col-md-9 col-xs-9 ">
 
 
   <h1> All Jobs</h1>
- <div class="dropdown clearfix pull-right">
 
-  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    排序
-    <span class="caret"></span>
-  </button>
   <br><br>
   <li>
     <% if user_signed_in? && current_user.admin? %>
-     <%= link_to(content_tag(:i, " Back to Admin", class: "fa fa-reply-all"), admin_jobs_path) %>
+     <%= link_to(content_tag(:i, " 返回管理大本营", class: "fa fa-reply-all"), admin_jobs_path) %>
     <% end %>
   </li>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %></li>
-    <li><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %></li>
-    <li><%= link_to("按照发表时间排序", jobs_path ) %></li>
-  </ul>
 
 </div>
 <tr></tr>
@@ -35,6 +26,7 @@
 
 
 <table class="table table-boldered table-striped custab" >
+
   <thead>
     <tr>
       <td>合作项目</td>
@@ -52,14 +44,14 @@
         <%= link_to jobs_path, class: "btn btn-xs btn-default" do%>
         创建时间<i class="fa fa-caret-down"></i><% end %>
       </td>
+      <td>申请</td>
       <td>
         <% if user_signed_in? && current_user.admin? %>
         管理
         <% end %>
       </td>
     </tr>
-  </thead>
-  <tbody>
+
   <% @jobs.each do |job| %>
   <tr>
     <td><%= link_to(job.title, job_path(job)) %></td>
@@ -90,8 +82,6 @@
     <div class="text-center">
        <%= will_paginate @jobs %>
     </div>
-</div>
 
+  </div>
 </div>
-</div>
-<div>
