@@ -1,0 +1,2 @@
+module Groups::GrowHelper
+end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   resources :jobs do
@@ -18,6 +18,12 @@ Rails.application.routes.draw do
 
   namespace :account do
     resources :jobs
+  end
+
+  namespace :groups do
+    resources :grow
+    resources :study
+    resources :cognitive
   end
 
   root 'welcome#index'
