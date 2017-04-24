@@ -7,7 +7,7 @@ class User < ApplicationRecord
   def admin?
     is_admin
   end
-  
+
   has_many :resumes
   has_many :jobs
 
@@ -21,4 +21,5 @@ class User < ApplicationRecord
   def apply!(job)
    applied_jobs << job
   end
+  
 end

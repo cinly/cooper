@@ -1,0 +1,106 @@
+
+
+    <!-- /.row --><hr>
+      <br>
+      <li>
+        <% if user_signed_in? && current_user.admin? %>
+         <%= link_to(content_tag(:i, " 返回管理大本营", class: "fa fa-reply-all"), admin_jobs_path) %>
+        <% end %>
+      </li>
+
+    </div>
+    <tr></tr>
+
+
+    <!--% if user_signed_in? && current_user.admin? %-->
+      <!--%= link_to("Add a job", new_job_path, :class => "btn btn-default") %-->
+    <!--% end %-->
+
+
+    <table class="table table-boldered table-striped custab" >
+
+      <thead>
+        <tr>
+          <td>合作项目</td>
+          <td> 社群</td>
+          <td>
+            <%= link_to jobs_path(:order => "by_lower_bound"), class: "btn btn-xs btn-default" do%>
+                              下限<i class="fa fa-caret-up"></i><% end %>
+                              <%= link_to jobs_path(:order => "by_upper_bound"), class: "btn btn-xs btn-default" do%>
+                              上限<i class="fa fa-caret-down"></i><% end %>
+          </td>
+
+          <td>公司</td>
+          <td>城市</td>
+          <td>
+            <%= link_to jobs_path, class: "btn btn-xs btn-default" do%>
+            创建时间<i class="fa fa-caret-down"></i><% end %>
+          </td>
+          <td>申请</td>
+          <td>
+            <% if user_signed_in? && current_user.admin? %>
+            管理
+            <% end %>
+          </td>
+        </tr>
+
+      <% @jobs.each do |job| %>
+      <tr>
+        <td><%= link_to(job.title, job_path(job)) %></td>
+        <td><%= job.category %></td>
+        <td>
+          <span class="badge badge-info">
+            <span class="fa fa-rmb"></span>
+            <%= job.wage_lower_bound%>
+             ~
+            <%= job.wage_upper_bound%>
+            </span>
+        </td>
+        <td><%= job.company %></td>
+        <td><%= job.city %></td>
+        <td><%= job.created_at %></td>
+        <td><%= link_to("申请合作", job_path(job), class: "btn btn-xs btn-success") %></td>
+        <td>
+         <% if current_user && current_user == job.user %>
+         <%= link_to edit_admin_job_path(job), class: "btn btn-xs btn-info" do%>
+         <i class="fa fa-pencil"></i><% end %>
+         <%= link_to admin_job_path(job), method: :delete, class: "btn btn-xs btn-danger", data:{ confirm: "你确定删除吗？"} do%>
+         <i class="fa fa-trash-o"></i><% end %>
+         <% if job.is_hidden %>
+         <%= link_to publish_admin_job_path(job), method: :post, class: "btn btn-xs btn-success" do %>
+         <i class="fa fa-eye"></i><% end %>
+         <% else %>
+         <%= link_to hide_admin_job_path(job), method: :post, class: "btn btn-xs btn-warning" do %>
+         <i class="fa fa-eye-slash"></i><% end %>
+         <% end %>
+         <% end %>
+        </td>
+       </tr>
+       <% end %>
+      </tbody>
+     </table>
+     <br>
+     <div class="text-center">
+        <%= will_paginate @jobs %>
+     </div>
+     <br><br><br>
+
+
+         <div class="row all_image">
+             <div class="col-xs-6 col-md-3 all_image_css"><!--图片-->
+                 <%= link_to image_tag("cz1.jpg", class: "img-rounded img-responsive img-center"), image_path(grow_jobs_path(:order => "category")) %>
+                 <h4 class="text-center"><%= link_to("成长", grow_jobs_path(:order => "category")) %></h4>
+             </div>
+             <div class="col-xs-6 col-md-3 all_image_css">
+                 <%= link_to image_tag("hh.jpg", class: "img-rounded img-responsive img-center"), image_path(study_jobs_path(:order => "category")) %>
+                 <h4 class="text-center"><%= link_to("学习", study_jobs_path(:order => "category")) %></h4>
+             </div>
+             <div class="col-xs-6 col-md-3 all_image_css">
+                 <%= link_to image_tag("xz.jpg", class: "img-rounded img-responsive img-center"), image_path(cognitive_jobs_path(:order => "category")) %>
+                 <h4 class="text-center"><%= link_to("认知", cognitive_jobs_path(:order => "category")) %></h4>
+             </div>
+             <div class="col-xs-6 col-md-3 all_image_css">
+                 <%= link_to image_tag("all.jpg", class: "img-rounded img-responsive img-center"), image_path(jobs_path) %>
+                 <h4 class="text-center"><%= link_to("全部", jobs_path) %></h4>
+             </div>
+         </div>

@@ -1,0 +1,58 @@
+
+<div class="row set-jobs" >
+ <div class="col-md-10 col-md-offset-1 job-content">
+  <div class="col-md-9 col-xs-9 ">
+<!--=== 搜索结果，没有符合条件的数据 ===-->
+<% if @jobs.blank?%>
+
+  <div class="search-error">
+    <h2>没有符合搜索条件的资料哦！</h2><br />
+    <p><%= link_to("立即查看工作", jobs_path, class: "btn btn-lg btn-success") %></p>
+  </div>
+
+<% else %>
+<!--=== 搜索结果，有符合条件的数据 ===-->
+
+
+  <h1><sapn class="fa fa-search"></sapn> 搜索结果</h1>
+
+
+  <!--=== 左侧区块 ===-->
+
+  <% @jobs.each do |job| %>
+  <div class="col-md-9 job-box">
+    <div class="info">
+      <div class="info-top">
+        <h3><%= link_to(job.title, job_path(job), target: "_blank" )%></h3><span><%= job.created_at.strftime("%Y-%m-%d") %></span>
+      </div>
+      <div class="info-mid">
+        <%= job.wage_lower_bound %>  ~ <%= job.wage_upper_bound %>
+      </div>
+      <div class="info-bot">
+        <span><%= job.category %></span>
+      </div>
+    </div>
+    <!--=== 右侧区块 ===-->
+    <div class="company">
+
+      <div class="company-mid">
+        <sapn class="fa fa-envelope"></sapn><span><%= job.contact_email %></span>
+      </div>
+      <div class="company-bot">
+        <sapn class="fa fa-map-marker"></sapn><span><%= job.city %></span>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+<!--=== 换页区块 ===-->
+<div class="col-md-10 col-md-offset-1 job-bottom">
+  <div class="text-center">
+    <%= will_paginate @jobs %>
+  </div>
+</div>
+<% end %>
+
+</div>
+</div>
+</div>

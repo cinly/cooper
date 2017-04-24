@@ -55,7 +55,7 @@
 <br>
 <br>
 <!--======== 热门伙伴 =========-->
-<section id="brand" class="our-brand row">
+<section id="brand" class="our-brand row"><!--our-brand白色背景-->
         <div class="container">
           <div class="row">
             <div class="row">
@@ -64,18 +64,18 @@
               <div class="short-line"></div>
 
               <div class="col-sm-4">
-                <i><%= link_to image_tag("xx.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%></i>
+                <i><%= link_to image_tag("cz1.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(grow_jobs_path(:order => "category"))%></i>
                 <h4 class="text-center">成长</h4>
                <p>协同作战－关注成长</p>
              </div>
              <div class="col-sm-4">
-                <%= link_to image_tag("cz2.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
+                <%= link_to image_tag("hh.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(study_jobs_path(:order => "category"))%>
                 <h4 class="text-center">学习</h4>
                <p>携手进步－共同学习</p>
             </div>
 
             <div class="col-sm-4">
-               <%= link_to image_tag("rz.png", class: "img-circle img-responsive img-center frontpage-img"), image_path(jobs_path(:order => "category"))%>
+               <%= link_to image_tag("xz.jpg", class: "img-circle img-responsive img-center frontpage-img"), image_path(cognitive_jobs_path(:order => "category"))%>
                <h4 class="text-center">认知</h4>
               <p>寻找价值－提高认知</p>
            </div>

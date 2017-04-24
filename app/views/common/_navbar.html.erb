@@ -7,8 +7,20 @@
         <span class="glyphicon glyphicon-home"></span> Cooperation Home
       </a>
 
-
+        <%= form_tag search_jobs_path, :method => :get, class: "navbar-form navbar-right" do %>
+            <div class="input-group search-box">
+              <input type="text" class="form-control" name="keyword" placeholder="搜索职位、公司或地点" value="<%= params[:keyword] %>">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                   <i class="fa fa-search"></i>
+                  </button>
+               </div>
+            </div>
+        <% end %>
+    
     </div>
+
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

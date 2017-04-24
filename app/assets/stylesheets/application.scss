@@ -116,7 +116,7 @@ border-bottom-left-radius: 3px;//左下角圆边
 
 //=================注册====================
 .admin{
-  background-image:image_url('bi.png');
+  background-image:image_url('w7.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
@@ -176,6 +176,85 @@ border-bottom-left-radius: 3px;//左下角圆边
 //}
       //---------大图满屏------------
 .container-fluid .set-my-jobs{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+
+  //padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+//  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  //border-radius: 0;//圆角为0
+}
+
+//==============jobs-grow===================
+
+.grow-jobs{
+  background-image:image_url('w5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  background-color: rgba(250, 250, 250, 0.5)
+}
+
+//.grow-jobs {
+//  background: linear-gradient(#E1F5FE,#90A4AE,#E0F7FA,#C8E6C9,#78909C);
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  padding-bottom: 110px;
+//}
+      //---------大图满屏------------
+.container-fluid .grow-jobs{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+
+  //padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+//  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  //border-radius: 0;//圆角为0
+}
+
+//==============jobs-study===================
+
+.study-jobs{
+  background-image:image_url('w4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  background-color: rgba(250, 250, 250, 0.5)
+}
+//.study-jobs {
+//  background: linear-gradient(#E1F5FE,#90A4AE,#E0F7FA,#C8E6C9,#78909C);
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  padding-bottom: 110px;
+//}
+      //---------大图满屏------------
+.container-fluid .study-jobs{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+
+  //padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+//  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  //border-radius: 0;//圆角为0
+}
+
+//==============jobs-cognitive===================
+
+.cognitive-jobs{
+  background-image:image_url('w2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  background-color: rgba(250, 250, 250, 0.5)
+}
+//.cognitive-jobs {
+//  background: linear-gradient(#E1F5FE,#90A4AE,#E0F7FA,#C8E6C9,#78909C);
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  padding-bottom: 110px;
+//}
+      //---------大图满屏------------
+.container-fluid .cognitive-jobs{
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;

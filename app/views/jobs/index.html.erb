@@ -2,82 +2,9 @@
  <div class="col-md-10 col-md-offset-1 job-content">
   <div class="col-md-9 col-xs-9 ">
 
-
-  <h1> All Jobs</h1>
-
-  <br><br>
-  <li>
-    <% if user_signed_in? && current_user.admin? %>
-     <%= link_to(content_tag(:i, " 返回管理大本营", class: "fa fa-reply-all"), admin_jobs_path) %>
-    <% end %>
-  </li>
-
-</div>
-<tr></tr>
-
-
-<!--% if user_signed_in? && current_user.admin? %-->
-  <!--%= link_to("Add a job", new_job_path, :class => "btn btn-default") %-->
-<!--% end %-->
-
-
-<table class="table table-boldered table-striped custab" >
-
-  <thead>
-    <tr>
-      <td>合作项目</td>
-      <td>社群</td>
-      <td>
-        <%= link_to jobs_path(:order => "by_lower_bound"), class: "btn btn-xs btn-default" do%>
-                          上限<i class="fa fa-caret-up"></i><% end %>
-                          <%= link_to jobs_path(:order => "by_upper_bound"), class: "btn btn-xs btn-default" do%>
-                          下限<i class="fa fa-caret-down"></i><% end %>
-      </td>
-
-      <td>公司</td>
-      <td>城市</td>
-      <td>
-        <%= link_to jobs_path, class: "btn btn-xs btn-default" do%>
-        创建时间<i class="fa fa-caret-down"></i><% end %>
-      </td>
-      <td>申请</td>
-      <td>
-        <% if user_signed_in? && current_user.admin? %>
-        管理
-        <% end %>
-      </td>
-    </tr>
-
-  <% @jobs.each do |job| %>
-  <tr>
-    <td><%= link_to(job.title, job_path(job)) %></td>
-    <td><%= job.category %></td>
-    <td>
-      <span class="badge badge-info">
-        <span class="fa fa-rmb"></span>
-        <%= job.wage_lower_bound%>
-         ~
-        <%= job.wage_upper_bound%>
-        </span>
-    </td>
-    <td><%= job.company %></td>
-    <td><%= job.city %></td>
-    <td><%= job.created_at %></td>
-    <td><%= link_to("申请合作", new_job_resume_path(job), class: "btn btn-xs btn-success") %></td>
-    <td>
-     <% if current_user && current_user == job.user %>
-      <%= link_to("Edit", edit_job_path(job)) %> |
-      <%= link_to("Delete", job_path(job), :method => :delete, :data=> { :confirm => "Are you sure?"}) %>
-     <% end %>
-    </td>
-   </tr>
-   <% end %>
-  </tbody>
- </table>
-
-    <div class="text-center">
-       <%= will_paginate @jobs %>
-    </div>
-
-  </div>
+       <h1>全部社群</h1>
+          
+          <%= render :partial => "groups",  :as => :job %>
+   </div>
+ </div>
 </div>
